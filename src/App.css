@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: green;
 }
 
 .App-link {
@@ -30,4 +30,99 @@
   to {
     transform: rotate(360deg);
   }
+}
+.todo{
+  display: flex;
+  justify-content: center;
+  height: 3rem
+}
+.todo-item{
+  color: black;
+  opacity: 1;
+  font-family: 'Lucida Sans';
+  text-align: center;
+  font-size: 20px;
+}
+
+.todo-item-complete{
+  color: black;
+  opacity: .3;
+  font-family: 'Lucida Sans';
+  text-align: center;
+  text-decoration: line-through;
+  font-size: 20px;
+}
+.inputTodo, .btnfooter{
+  display: flex;
+  justify-content: center;
+}
+.inputItem{
+  height: 35px;
+  width: 300px;
+  border: #c5c5dc solid 1.5px;
+  border-radius: 5px;
+  margin: 5px 2px;
+  padding-left: 10px;
+}
+.inputItem:focus{
+  border: #61dafb solid 1.5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btnItem{
+  background-color: #61dafb;
+  border-radius: 5px;
+  border: #61dafb solid 1px;
+  font-family: 'Lucida Sans';
+  font-size: 15px;
+  margin: 5px 2px;
+}
+.btnItem:hover{
+  background-color: #20b8e2;
+  border: #20b8e2 solid 1px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.btn{
+  background-color: #29f10e;
+  border-radius: 5px;
+  border: #29f10e solid 1px;
+  font-family: 'Lucida Sans';
+  font-size: 15px;
+  margin: 5px 10px;
+  width: 90px;
+  height: 35px;
+}
+.all:hover{
+  background-color: #1db309;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.complete{
+  background-color: #f7160f;
+}
+.complete:hover{
+  background-color: #b30e08;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.active{
+  background-color: #1b5ae4;
+}
+.active:hover{
+  background-color: #0a3aa0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.todo-list{
+  display: flex;
+  justify-content: flex-start;
+  width: 20rem;
+}
+.todo button{
+  background-color: rgb(211, 41, 41);
+  border-radius: 5px;
+  border: rgb(209, 58, 58) solid 1px;
+  font-family: 'Lucida Sans';
+  font-size: 12px;
+  height: 20px;
+  margin: 20px 10px
+}
+.todo button:hover{
+  background-color: red;
 }
