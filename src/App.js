@@ -20,8 +20,9 @@ class App extends Component {
     this.onActive = this.onActive.bind(this);
     this.onComplete = this.onComplete.bind(this)
     this.onDeleteItem = this.onDeleteItem.bind(this)
+
   }
-  
+
   onClickItem(item){
     return(event)=>{
       let isCheck = item.isCheck;
@@ -40,17 +41,22 @@ class App extends Component {
       })
     }
   }
-  onAddItem(){
-    var content = document.getElementById("textContent")
-    this.setState({
-      todoItem:[
-        {title :content.value, isCheck: false},
-        ...this.state.todoItem,
-      ]
-    },function(){
-      this.todoItemBackUp = this.state.todoItem;
-      content.value = "";
-    })
+  onAddItem(content){
+    //var content = document.getElementById("textContent").value
+    if(content.length>0){
+      this.setState({
+        todoItem:[
+          {title :content, isCheck: false},
+          ...this.state.todoItem,
+        ]
+      },function(){
+        this.todoItemBackUp = this.state.todoItem;
+        content = "";
+      })
+    }
+    else{
+      alert("Mời bạn nhập vào nhiệm vụ")
+    }
   }
   onDeleteItem(item){
     const index = this.state.todoItem.indexOf(item)
